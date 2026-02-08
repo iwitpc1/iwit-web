@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&family=Segoe+UI:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-color: #2F0463;
+  --primary-dark: #061257;
+  --text-primary: rgba(47, 43, 61, 0.9);
+  --text-secondary: rgba(47, 43, 61, 0.7);
+  --bg-white: #FFF;
+  --border-color: #FFF;
+
+  /* Spacing */
+  --padding-2: 8px;
+  --padding-5: 20px;
+  --gap-2: 8px;
+
+  /* Fonts */
+  --font-public-sans: 'Public Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  --font-segoe: 'Segoe UI', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-segoe);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,252 @@
+<section class="services-section">
+  <div class="services-container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-badge">Our Core Services</span>
+      <h2 class="section-title">
+        <span class="highlight">Solutions designed</span> to drive product growth.
+      </h2>
+      <p class="section-description">
+        Everything you need to build, launch, and scale your digital product. From strategy and
+        design to development and delivery, we cover it all.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <div class="service-card">
+          <div class="service-icon" [ngClass]="'icon-' + service.iconColor">
+            @switch (service.icon) {
+              @case ('rpa') {
+                <!-- RPA Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="24"
+                    cy="24"
+                    r="6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <circle cx="24" cy="24" r="2" fill="currentColor" />
+                  <line x1="24" y1="18" x2="24" y2="12" stroke="currentColor" stroke-width="2" />
+                  <line x1="30" y1="24" x2="36" y2="24" stroke="currentColor" stroke-width="2" />
+                  <line x1="24" y1="30" x2="24" y2="36" stroke="currentColor" stroke-width="2" />
+                  <line x1="18" y1="24" x2="12" y2="24" stroke="currentColor" stroke-width="2" />
+                  <rect x="10" y="10" width="4" height="4" fill="currentColor" rx="1" />
+                  <rect x="34" y="10" width="4" height="4" fill="currentColor" rx="1" />
+                  <rect x="10" y="34" width="4" height="4" fill="currentColor" rx="1" />
+                  <rect x="34" y="34" width="4" height="4" fill="currentColor" rx="1" />
+                </svg>
+              }
+              @case ('globe') {
+                <!-- Globe Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="24"
+                    cy="24"
+                    r="18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <ellipse
+                    cx="24"
+                    cy="24"
+                    rx="7"
+                    ry="18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="2" />
+                  <path
+                    d="M24 6 C30 12, 30 36, 24 42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M24 6 C18 12, 18 36, 24 42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              }
+              @case ('badge') {
+                <!-- Badge/Check Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 6L27.6 14.4L36 16.8L30 23.4L31.2 32.4L24 28.2L16.8 32.4L18 23.4L12 16.8L20.4 14.4L24 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 24L22 28L30 20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              }
+              @case ('diamond') {
+                <!-- Diamond Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 18L24 6L38 18L24 42L10 18Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 18L24 42L38 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M10 18H38" stroke="currentColor" stroke-width="2" />
+                  <path
+                    d="M14 18L24 6L34 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              }
+              @case ('cloud') {
+                <!-- Cloud/DevOps Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M36 28C38.7614 28 41 25.7614 41 23C41 20.2386 38.7614 18 36 18C35.8 18 35.6 18.02 35.4 18.04C34.6 13.62 30.8 10 26 10C20.48 10 16 14.48 16 20C16 20.34 16.02 20.68 16.04 21H16C12.68 21 10 23.68 10 27C10 30.32 12.68 33 16 33H36"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <rect
+                    x="14"
+                    y="30"
+                    width="6"
+                    height="8"
+                    rx="1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <rect
+                    x="22"
+                    y="32"
+                    width="4"
+                    height="6"
+                    rx="1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              }
+              @case ('laptop') {
+                <!-- Laptop Icon -->
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="8"
+                    y="12"
+                    width="32"
+                    height="22"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <line
+                    x1="4"
+                    y1="38"
+                    x2="44"
+                    y2="38"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line x1="8" y1="34" x2="8" y2="38" stroke="currentColor" stroke-width="2" />
+                  <line x1="40" y1="34" x2="40" y2="38" stroke="currentColor" stroke-width="2" />
+                  <rect
+                    x="14"
+                    y="18"
+                    width="12"
+                    height="8"
+                    rx="1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    fill="none"
+                  />
+                  <line
+                    x1="28"
+                    y1="20"
+                    x2="34"
+                    y2="20"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="28"
+                    y1="24"
+                    x2="34"
+                    y2="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              }
+            }
+          </div>
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-description">{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
