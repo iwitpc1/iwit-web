@@ -6,12 +6,13 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --primary-color: #2F0463;
+  --primary-color: #2f0463;
   --primary-dark: #061257;
   --text-primary: rgba(47, 43, 61, 0.9);
   --text-secondary: rgba(47, 43, 61, 0.7);
-  --bg-white: #FFF;
-  --border-color: #FFF;
+  --bg-white: #fff;
+  --border-color: #fff;
+  --font-public-sans: 'Public Sans', -apple-system, Roboto, Helvetica, sans-serif;
 
   /* Spacing */
   --padding-2: 8px;
@@ -28,6 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-public-sans);
 }
 
 body {
