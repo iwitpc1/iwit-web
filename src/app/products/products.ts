@@ -13,32 +13,31 @@ interface Product {
   selector: 'app-products',
   imports: [CommonModule],
   templateUrl: './products.html',
-  styleUrl: './products.scss'
+  styleUrl: './products.scss',
 })
 export class ProductsComponent {
   protected readonly products: Product[] = [
-    {
-      id: 'analytics',
-      name: 'Analytics Dashboard',
-      description: 'Comprehensive analytics and reporting tools.',
-      image: 'assets/product-analytics.png'
-    },
+    // {
+    //   id: 'analytics',
+    //   name: 'Analytics Dashboard',
+    //   description: 'Comprehensive analytics and reporting tools.',
+    //   image: 'assets/product-analytics.png'
+    // },
     {
       id: 'kasebook',
       name: 'KaseBook',
       description: 'Assign. Track. Respond. Manage Cases with Total Clarity.',
-      image: 'assets/kasebook-laptop.png',
-      logo: 'assets/kasebook-logo.png'
+      image: 'assets/kasebook-tasks-page.svg',
     },
-    {
-      id: 'design-tools',
-      name: 'Design Tools',
-      description: 'Professional design and prototyping solutions.',
-      image: 'assets/product-design.png'
-    }
+    // {
+    //   id: 'design-tools',
+    //   name: 'Design Tools',
+    //   description: 'Professional design and prototyping solutions.',
+    //   image: 'assets/product-design.png'
+    // }
   ];
 
-  protected currentSlide = signal(1); // Start with KaseBook (middle card)
+  protected currentSlide = signal(0); // Start with KaseBook (middle card)
 
   nextSlide(): void {
     const current = this.currentSlide();

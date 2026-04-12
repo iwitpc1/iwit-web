@@ -1,10 +1,16 @@
-<section class="products-section">
+<section class="products-section" id="products">
   <div class="products-container">
     <!-- Section Header -->
     <div class="section-header">
       <span class="section-badge">Our Products</span>
       <h2 class="section-title">
-        <span class="highlight">Ready built solutions</span> designed to save time and effort.
+        <span class="highlight">
+          <span class="highlighted-img">
+            <img src="assets/shape.svg" alt="highlighted image" />
+          </span>
+          Ready built solutions</span
+        >
+        designed to save time and effort.
       </h2>
       <p class="section-description">
         Our products are created to be reliable, scalable, and easy to use.
@@ -13,33 +19,18 @@
 
     <!-- Carousel -->
     <div class="carousel-wrapper">
-      <div class="carousel-track" [style.transform]="'translateX(-' + (currentSlide() * 100) + '%)'">
+      <div class="carousel-track" [style.transform]="'translateX(-' + currentSlide() * 100 + '%)'">
         @for (product of products; track product.id; let i = $index) {
           <div class="carousel-slide" [class.active]="i === currentSlide()">
             <div class="product-card" [class.center]="i === currentSlide()">
               @if (i === currentSlide()) {
                 <!-- Center Card - Featured Product -->
-                <div class="product-card-content featured">
-                  @if (product.logo) {
-                    <div class="product-logo">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 5L15 10L10 15L5 10L10 5Z" fill="url(#productGradient1)" />
-                        <path d="M15 10L20 15L15 20L10 15L15 10Z" fill="url(#productGradient1)" />
-                        <path d="M20 15L25 20L20 25L15 20L20 15Z" fill="url(#productGradient1)" />
-                        <defs>
-                          <linearGradient id="productGradient1" x1="0" y1="0" x2="40" y2="40">
-                            <stop offset="0%" stop-color="#D946EF"/>
-                            <stop offset="100%" stop-color="#8B5CF6"/>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <span class="product-name">{{ product.name }}</span>
-                    </div>
-                  }
+                <img [src]="product.image" alt="product image" />
+
+                <!-- <div class="product-card-content featured">
                   <div class="product-image-container">
                     <div class="laptop-mockup">
                       <div class="laptop-screen">
-                        <!-- KaseBook Interface Mockup -->
                         <div class="kasebook-interface">
                           <div class="interface-sidebar">
                             <div class="sidebar-item active"></div>
@@ -61,7 +52,7 @@
                     </div>
                   </div>
                   <p class="product-description">{{ product.description }}</p>
-                </div>
+                </div> -->
               } @else {
                 <!-- Side Cards - Decorative -->
                 <div class="product-card-content side">
@@ -79,17 +70,22 @@
                       <div class="chart-element line">
                         <svg width="140" height="80" viewBox="0 0 140 80">
                           <rect x="10" y="10" width="120" height="60" fill="#F3E8FF" rx="8" />
-                          <path d="M20 50 L40 30 L60 40 L80 20 L100 35 L120 15" stroke="#8B5CF6" stroke-width="3" fill="none" />
+                          <path
+                            d="M20 50 L40 30 L60 40 L80 20 L100 35 L120 15"
+                            stroke="#8B5CF6"
+                            stroke-width="3"
+                            fill="none"
+                          />
                           <circle cx="20" cy="50" r="4" fill="#8B5CF6" />
                           <circle cx="40" cy="30" r="4" fill="#8B5CF6" />
                           <circle cx="60" cy="40" r="4" fill="#8B5CF6" />
                         </svg>
                       </div>
                       <div class="chart-element bars">
-                        <div class="bar" style="height: 40%; background: #FBBF24;"></div>
-                        <div class="bar" style="height: 60%; background: #8B5CF6;"></div>
-                        <div class="bar" style="height: 35%; background: #EC4899;"></div>
-                        <div class="bar" style="height: 50%; background: #3B82F6;"></div>
+                        <div class="bar" style="height: 40%; background: #fbbf24"></div>
+                        <div class="bar" style="height: 60%; background: #8b5cf6"></div>
+                        <div class="bar" style="height: 35%; background: #ec4899"></div>
+                        <div class="bar" style="height: 50%; background: #3b82f6"></div>
                       </div>
                     </div>
                   } @else {
@@ -103,7 +99,10 @@
                               <stop offset="100%" stop-color="#EC4899" />
                             </linearGradient>
                           </defs>
-                          <path d="M30 20 L30 40 Q30 50 40 60 L40 120 Q40 130 50 130 Q60 130 60 120 L60 60 Q70 50 70 40 L70 20 Z" fill="url(#bottleGradient)" />
+                          <path
+                            d="M30 20 L30 40 Q30 50 40 60 L40 120 Q40 130 50 130 Q60 130 60 120 L60 60 Q70 50 70 40 L70 20 Z"
+                            fill="url(#bottleGradient)"
+                          />
                           <rect x="25" y="10" width="50" height="15" fill="#8B5CF6" rx="3" />
                         </svg>
                       </div>
@@ -130,27 +129,25 @@
 
       <!-- Navigation Arrows -->
       <button class="carousel-arrow left" (click)="prevSlide()" aria-label="Previous product">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="assets/arrow-left.svg" class="black-arrow" alt="Previous product" />
+        <img src="assets/arrow-left-white.svg" class="white-arrow" alt="Previous product" />
       </button>
       <button class="carousel-arrow right" (click)="nextSlide()" aria-label="Next product">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="assets/arrow-right.svg" class="black-arrow" alt="Next product" />
+        <img src="assets/arrow-right-white.svg" class="white-arrow" alt="Next product" />
       </button>
     </div>
 
     <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
+    <!-- <div class="carousel-indicators">
       @for (product of products; track product.id; let i = $index) {
-        <button 
-          class="indicator-dot" 
+        <button
+          class="indicator-dot"
           [class.active]="i === currentSlide()"
           (click)="goToSlide(i)"
-          [attr.aria-label]="'Go to product ' + (i + 1)">
-        </button>
+          [attr.aria-label]="'Go to product ' + (i + 1)"
+        ></button>
       }
-    </div>
+    </div> -->
   </div>
 </section>

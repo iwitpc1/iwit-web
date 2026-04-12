@@ -51,4 +51,8 @@ export class HeroComponent implements OnInit {
 
     requestAnimationFrame(animate);
   }
+
+  public scrollToProducts() {
+    document.getElementById('products')?.scrollIntoView();
+  }
 }

@@ -9,7 +9,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .btn-primary {
@@ -72,9 +72,8 @@
 }
 
 .navbar-container {
-  max-width: 1506px;
+  max-width: min(1440px, 82vw);
   margin: 0 auto;
-  padding: 0 32px;
 }
 
 .navbar-content {
